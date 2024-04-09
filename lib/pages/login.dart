@@ -22,12 +22,25 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  'assets/airplane.png',
-                  height: 250,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Welcome',
+                    style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                  ),
                 ),
                 Align(
                   alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Find your NTT destination!',
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Align(
+                  alignment: Alignment.center,
                   child: Padding(
                     padding: const EdgeInsets.all(20),
                     child: Text(
@@ -66,15 +79,7 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
           )),
-          // Align(
-          //     alignment: Alignment.bottomRight,
-          //     child: Padding(
-          //       padding: const EdgeInsets.all(8.0),
-          //       child: Text(
-          //         'Asfazura',
-          //         style: TextStyle(fontSize: 18, color: Colors.grey),
-          //       ),
-          //     ))
+          
         ],
       ),
     );

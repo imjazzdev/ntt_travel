@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ntt_travel/pages/detail.dart';
+import 'package:ntt_travel/pages/drawer.dart';
 import 'package:ntt_travel/pages/search.dart';
 
 import '../utils/var_global.dart';
@@ -11,34 +12,39 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     TextEditingController search = TextEditingController();
     return Scaffold(
+      drawer: Drawer(
+        width: 200,
+        backgroundColor: Colors.transparent,
+        child: DrawerScren(),
+      ),
       appBar: AppBar(
-        title: Text('Home'),
+        title: Text('Beranda'),
         actions: [
-          Container(
-            margin: EdgeInsets.all(5),
-            width: 200,
-            height: 120,
-            child: TextField(
-              controller: search,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  filled: true,
-                  fillColor: Colors.purple.shade200,
-                  hintText: 'Search',
-                  suffixIcon: IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Search(title: search.text),
-                            ));
-                      },
-                      icon: Icon(
-                        Icons.search_rounded,
-                        size: 28,
-                      ))),
-            ),
-          )
+          // Container(
+          //   margin: EdgeInsets.all(5),
+          //   width: 200,
+          //   height: 120,
+          //   child: TextField(
+          //     controller: search,
+          //     decoration: InputDecoration(
+          //         border: OutlineInputBorder(),
+          //         filled: true,
+          //         fillColor: Colors.purple.shade200,
+          //         hintText: 'Search',
+          //         suffixIcon: IconButton(
+          //             onPressed: () {
+          //               Navigator.push(
+          //                   context,
+          //                   MaterialPageRoute(
+          //                     builder: (context) => Search(title: search.text),
+          //                   ));
+          //             },
+          //             icon: Icon(
+          //               Icons.search_rounded,
+          //               size: 28,
+          //             ))),
+          //   ),
+          // )
         ],
       ),
       body: GridView.builder(

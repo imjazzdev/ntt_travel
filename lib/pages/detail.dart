@@ -201,7 +201,7 @@ class _DetailPageState extends State<DetailPage> {
                           animType: AnimType.rightSlide,
                           body: Column(
                             children: [
-                              Text('Lakukan pesan dan bayar?'),
+                              Text('Pesan tempat?'),
                               Text(
                                 widget.harga,
                                 style: TextStyle(

@@ -9,10 +9,26 @@ class Pembayaran extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(),
       body: Container(
         height: double.maxFinite,
         width: double.maxFinite,
-        child: Image.asset('assets/dana.jpeg'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/whatsapp.png',
+              height: 100,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Hubungi Admin',
+              style: TextStyle(fontSize: 25),
+            )
+          ],
+        ),
       ),
       bottomNavigationBar: Container(
         padding: EdgeInsets.all(20),
@@ -22,9 +38,13 @@ class Pembayaran extends StatelessWidget {
                 context: context,
                 dialogType: DialogType.info,
                 animType: AnimType.rightSlide,
-                title: 'Pesanan dikonfirmasi',
+                title: 'Hubungi?',
                 btnCancelOnPress: () {},
                 btnOkOnPress: () {
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    backgroundColor: Colors.green.shade400,
+                    content: Text("Berhasil menghubungi"),
+                  ));
                   Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(

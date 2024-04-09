@@ -13,8 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          textTheme: GoogleFonts.poppinsTextTheme(),
-          primarySwatch: Colors.purple),
+          textTheme: GoogleFonts.latoTextTheme(), primarySwatch: Colors.purple),
       home: LoginPage(),
       debugShowCheckedModeBanner: false,
     );
